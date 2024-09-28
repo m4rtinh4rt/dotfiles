@@ -1,0 +1,9 @@
+show=run
+prompt=
+term=alacritty
+exec_search=true
+monitor=eDP-1
+key_up=k
+key_down=j
+key_left=h
+key_right=l
