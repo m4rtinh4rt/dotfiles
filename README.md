@@ -10,3 +10,4 @@ The software I use, sorted by alphabetical order:
 - dunst
 - hyprland
 - waybar
+- wofy
