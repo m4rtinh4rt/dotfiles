@@ -1,19 +1,17 @@
 {
-    "layer": "top", // Waybar at top layer
+    "layer": "top",
     "output": "eDP-1",
-    "position": "top", // Waybar position (top|bottom|left|right)
-    // "height": 31, // Waybar height (to be removed for auto height)
+    "position": "top",
     "gtk-layer-shell": true,
-    // "width": 1280, // Waybar width
-    // Choose the order of the modules
     "modules-left": ["hyprland/workspaces"],
     "modules-center": ["clock"],
     "modules-right": [
-        "battery#bat0",
-        "pulseaudio",
+	"privacy",
+        "upower",
+        "wireplumber",
+	"bluetooth",
         "network",
-],
-
+    ],
     "hyprland/workspaces": {
         "sort-by-name": true,
 	"on-click": "activate",
@@ -38,56 +36,53 @@
         "format": "{:%H:%M}",
         "interval": 1
     },
-    "battery": {
-        "states": {
-            "good": 95,
-            "warning": 30,
-            "critical": 15
-        },
-        "format": "{icon} {capacity}%",
-        "format-full": "",
-		"format-icons": ["", "", "", "", ""],
-        // "format-good": "", // An empty format will hide the module
-		"tooltip": true
-    },
-    "battery#bat0": {
-        "bat": "BAT0",
-        "states": {
-            "good": 95,
-            "warning": 30,
-            "critical": 15
-        },
-        "format": "{icon} {capacity}%",
-        "format-full": "",
-		"format-icons": ["", "", "", "", ""],
-        // "format-good": "", // An empty format will hide the module
-		"tooltip": true
+    "upower": {
+    	"format": " {percentage}",
+	"icon-size": 15,
+	"hide-if-empty": true,
+	"tooltip": false,
     },
     "network": {
         // "interface": "wlp2*", // (Optional) To force the use of this interface
-        "format-wifi": " {essid}",
+        "format-wifi": "  {essid}",
         "format-ethernet": "{ifname}: {ipaddr}/{cidr} ",
         "format-disconnected": "Disconnected ⚠",
-		"tooltip": true
+	"tooltip": false
     },
-    "pulseaudio": {
-        // "scroll-step": 1, // %, can be a float
-        "format": "{icon} {volume}% {format_source}",
-        "format-bluetooth": "{volume}%  {format_source}",
-        "format-bluetooth-muted": "   {format_source}",
-        "format-muted": "   {format_source}",
-        "format-source": " {volume}%",
-        "format-source-muted": "",
-        "format-icons": {
-            "headphones": "",
-            "handsfree": "",
-            "headset": "",
-            "phone": "",
-            "portable": "",
-            "car": "",
-            "default": ["", ""]
-        },
-        "on-click": "pactl set-source-mute @DEFAULT_SOURCE@ toggle",
-		"tooltip": true
+    "wireplumber": {
+	"format": "  {volume}%",
+	"format-muted": " ",
+	"tooltip": false,
+	"on-click": "wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle"
+    },
+    "bluetooth": {
+        "format-on": "󰂯",
+        "format-off": "󰂲",
+        "format-disabled": "", // an empty format will hide the module
+        "format-connected": "󰂱 {device_battery_percentage}%",
+        "tooltip-format-connected": "{device_enumerate}",
+        "tooltip-format-enumerate-connected": "{device_alias}\t{device_address}"
+    },
+    "privacy": {
+	"icon-spacing": 4,
+	"icon-size": 18,
+	"transition-duration": 250,
+	"modules": [
+		{
+			"type": "screenshare",
+			"tooltip": true,
+			"tooltip-icon-size": 24
+		},
+		{
+			"type": "audio-out",
+			"tooltip": true,
+			"tooltip-icon-size": 24
+		},
+		{
+			"type": "audio-in",
+			"tooltip": true,
+			"tooltip-icon-size": 24
+		}
+	]
     },
 }
