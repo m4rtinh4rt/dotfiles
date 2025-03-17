@@ -8,7 +8,7 @@
     "modules-right": [
 	"privacy",
         "upower",
-        "wireplumber",
+        "pulseaudio",
 	"bluetooth",
         "network",
     ],
@@ -49,12 +49,6 @@
         "format-disconnected": "Disconnected ⚠",
 	"tooltip": false
     },
-    "wireplumber": {
-	"format": "  {volume}%",
-	"format-muted": " ",
-	"tooltip": false,
-	"on-click": "wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle"
-    },
     "bluetooth": {
         "format-on": "󰂯",
         "format-off": "󰂲",
@@ -84,5 +78,13 @@
 			"tooltip-icon-size": 24
 		}
 	]
+    },
+    "pulseaudio": {
+        "format": "  {volume}% {icon} {format_source}",
+        "format-muted": "  {format_source}",
+        "format-source": "{volume}%  ",
+        "format-source-muted": " ",
+	"tooltip": false,
+	"on-click": "wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle"
     },
 }

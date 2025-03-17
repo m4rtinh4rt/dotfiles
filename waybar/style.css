@@ -71,7 +71,7 @@ button:hover {
 #clock,
 #upower,
 #network,
-#wireplumber {
+#pulseaudio {
     padding: 0 10px;
     color: #ffffff;
 }
@@ -134,12 +134,12 @@ label:focus {
     background-color: #f53c3c;
 }
 
-#wireplumber {
+#pulseaudio {
     background-color: #689d6a;
     color: #ffffff;
 }
 
-#wireplumber.muted {
+#pulseaudio.muted {
     background-color: #689d6a;
     color: #ffffff;
 }
