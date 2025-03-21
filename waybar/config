@@ -34,7 +34,8 @@
     },
     "clock": {
         "format": "{:%H:%M}",
-        "interval": 1
+        "interval": 1,
+        "tooltip": false
     },
     "upower": {
     	"format": " {percentage}",
