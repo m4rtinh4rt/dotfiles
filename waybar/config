@@ -1,91 +1,94 @@
 {
-    "layer": "top",
-    "output": "eDP-1",
-    "position": "top",
-    "gtk-layer-shell": true,
-    "modules-left": ["hyprland/workspaces"],
-    "modules-center": ["clock"],
-    "modules-right": [
-	"privacy",
-        "upower",
-        "pulseaudio",
-	"bluetooth",
-        "network",
-    ],
-    "hyprland/workspaces": {
-        "sort-by-name": true,
-	"on-click": "activate",
-        "format": "{icon}",
-        "format-icons": {
-            "1": "1",
-            "2": "2",
-            "3": "3",
-            "4": "4",
-            "5": "5",
-            "urgent": "",
-            "focused": "",
-            "default": ""
-        }
-    },
-    "custom/separator": {
-        "format": "|",
-        "interval": "once",
-        "tooltip": false
-    },
-    "clock": {
-        "format": "{:%H:%M}",
-        "interval": 1,
-        "tooltip": false
-    },
-    "upower": {
-    	"format": " {percentage}",
-	"icon-size": 15,
-	"hide-if-empty": true,
-	"tooltip": false,
-    },
-    "network": {
-        // "interface": "wlp2*", // (Optional) To force the use of this interface
-        "format-wifi": "  {essid}",
-        "format-ethernet": "{ifname}: {ipaddr}/{cidr} ",
-        "format-disconnected": "Disconnected ⚠",
-	"tooltip": false
-    },
-    "bluetooth": {
-        "format-on": "󰂯",
-        "format-off": "󰂲",
-        "format-disabled": "", // an empty format will hide the module
-        "format-connected": "󰂱 {device_battery_percentage}%",
-        "tooltip-format-connected": "{device_enumerate}",
-        "tooltip-format-enumerate-connected": "{device_alias}\t{device_address}"
-    },
-    "privacy": {
-	"icon-spacing": 4,
-	"icon-size": 18,
-	"transition-duration": 250,
-	"modules": [
-		{
-			"type": "screenshare",
-			"tooltip": true,
-			"tooltip-icon-size": 24
-		},
-		{
-			"type": "audio-out",
-			"tooltip": true,
-			"tooltip-icon-size": 24
-		},
-		{
-			"type": "audio-in",
-			"tooltip": true,
-			"tooltip-icon-size": 24
-		}
-	]
-    },
-    "pulseaudio": {
-        "format": "  {volume}% {icon} {format_source}",
-        "format-muted": "  {format_source}",
-        "format-source": "{volume}%  ",
-        "format-source-muted": " ",
-	"tooltip": false,
-	"on-click": "wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle"
-    },
+  "layer" : "top",
+  "output" : "eDP-1",
+  "position" : "top",
+  "gtk-layer-shell" : true,
+  "modules-left" : [
+    "hyprland/workspaces"
+  ],
+  "modules-center" : [
+    "clock"
+  ],
+  "modules-right" : [
+    "privacy",
+    "upower",
+    "pulseaudio",
+    "bluetooth",
+    "network"
+  ],
+  "hyprland/workspaces" : {
+    "sort-by-name" : true,
+    "on-click" : "activate",
+    "format" : "{icon}",
+    "format-icons" : {
+      "1" : "1",
+      "2" : "2",
+      "3" : "3",
+      "4" : "4",
+      "5" : "5",
+      "urgent" : "",
+      "focused" : "",
+      "default" : ""
+    }
+  },
+  "custom/separator" : {
+    "format" : "|",
+    "interval" : "once",
+    "tooltip" : false
+  },
+  "clock" : {
+    "format" : "{:%H:%M}",
+    "interval" : 1,
+    "tooltip" : false
+  },
+  "upower" : {
+    "format" : " {percentage}",
+    "icon-size" : 15,
+    "hide-if-empty" : true,
+    "tooltip" : false
+  },
+  "network" : {
+    "format-wifi" : "  {essid}",
+    "format-ethernet" : "{ifname}: {ipaddr}/{cidr} ",
+    "format-disconnected" : "Disconnected ⚠",
+    "tooltip" : false
+  },
+  "bluetooth" : {
+    "format-on" : "󰂯",
+    "format-off" : "󰂲",
+    "format-disabled" : "",
+    "format-connected" : "󰂱 {device_battery_percentage}%",
+    "tooltip-format-connected" : "{device_enumerate}",
+    "tooltip-format-enumerate-connected" : "{device_alias}"
+  },
+  "privacy" : {
+    "icon-spacing" : 4,
+    "icon-size" : 18,
+    "transition-duration" : 250,
+    "modules" : [
+      {
+        "type" : "screenshare",
+        "tooltip" : true,
+        "tooltip-icon-size" : 24
+      },
+      {
+        "type" : "audio-out",
+        "tooltip" : true,
+        "tooltip-icon-size" : 24
+      },
+      {
+        "type" : "audio-in",
+        "tooltip" : true,
+        "tooltip-icon-size" : 24
+      }
+    ]
+  },
+  "pulseaudio" : {
+    "format" : "  {volume}% {icon} {format_source}",
+    "format-muted" : "  {format_source}",
+    "format-source" : "{volume}%  ",
+    "format-source-muted" : " ",
+    "tooltip" : false,
+    "on-click" : "wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle"
+  }
 }
