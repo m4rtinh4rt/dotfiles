@@ -9,8 +9,10 @@ separate [repository](https://github.com/m4rtinh4rt/nvim).
 
 The software I use, sorted by alphabetical order:
 
-- alacritty
-- dunst
-- hyprland
-- waybar
-- wofy
+- [Alacritty](https://alacritty.org)
+- [Dunst](https://dunst-project.org)
+- [Hyprland](https://hyprland.org)
+- [Newsboat](https://newsboat.org)
+- [Taskwarrior](https://taskwarrior.org)
+- [Waybar](https://github.com/Alexays/Waybar)
+- [Wofy](https://github.com/SimplyCEO/wofi)
