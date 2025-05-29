@@ -16,5 +16,6 @@ The software I use, sorted by alphabetical order:
 - [Hyprpaper](https://wiki.hyprland.org/Hypr-Ecosystem/hyprpaper/)
 - [Newsboat](https://newsboat.org)
 - [Taskwarrior](https://taskwarrior.org)
+- [Universal Wayland Session Manager](https://github.com/Vladimir-csp/uwsm)
 - [Waybar](https://github.com/Alexays/Waybar)
 - [Wofy](https://github.com/SimplyCEO/wofi)
