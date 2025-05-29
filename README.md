@@ -12,6 +12,7 @@ The software I use, sorted by alphabetical order:
 - [Alacritty](https://alacritty.org)
 - [Dunst](https://dunst-project.org)
 - [Hyprland](https://hyprland.org)
+- [Hyprlock](https://wiki.hyprland.org/Hypr-Ecosystem/hyprlock/)
 - [Hyprpaper](https://wiki.hyprland.org/Hypr-Ecosystem/hyprpaper/)
 - [Newsboat](https://newsboat.org)
 - [Taskwarrior](https://taskwarrior.org)
